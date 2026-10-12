@@ -51,7 +51,7 @@ update-regime: pre-generator hand-edit
 - `INTENT-2026-10-12-001` — COS post deze eerste snapshot. ✅ **Gereed en geaccepteerd door Instinct (2026-10-12).** Sectie: deze file. Pad is tijdelijke relay tot structurele route (GitHub + Notion-share) staat.
 - `INTENT-2026-10-12-002` — Founder commit van v0.2 op `_shared/cos-architecture-canon.md`. ⏭️ **Buiten Instinct-mandaat.** Ronde-proces via founder + Hermes; geen Instinct-advies. Sectie: `_shared/`. Vereist: T-04 Q1 + R16 §3 toelating (geen COS-auto-promotie).
 - `INTENT-2026-10-12-003` — Aansluiting GitHub-repo voor DjinLabs Mothership. ✅ **Live (2026-10-12).** Repo `0xtsotsi/Djinlabs-Mothership` is public aangemaakt; eerste sync-mirror commit volgt direct. Voorgestelde naam was `djinlabs-mothership` onder user `0xtsotsi`. Zodra de repo bestaat, leest en maakt Instinct issues/tickets via de bestaande GitHub-koppeling. Sectie: GitHub.
-- `INTENT-2026-10-12-004` — Notion-API koppeling: Instinct-sync-pagina delen met COS Notion-integration zodat direct gelezen/gepost kan worden. ⏳ **Pending founder-actie (handmatig).** Sync-pagina staat in founder's Notion-workspace; delen kan niet via API. Stappen: sync-pagina openen → menu rechtsboven → connections/verbindingen → COS-integratie selecteren. Vervalt founder-relay in die richting zodra actief.
+- `INTENT-2026-10-12-004` — Notion-API koppeling: Instinct-sync-pagina delen met COS Notion-integration zodat direct gelezen/gepost kan worden. ✅ **Live (2026-10-12).** Bevestigd via verbindingstest: Instinct schreef `[2026-10-12 11:33] [BRON: founder] Verbindingstest INTENT-004: als COS deze regel via de Notion-API kan lezen, is de share met de COS-integratie volledig.` in de Instinct-status-sectie; COS leest deze regel via `mcp__notion__notion-fetch` op page-id `3e44c5f9-f8e5-81d0-ad77-db30272dc92c`. Founder-relay in deze richting is vervallen.
 
 ## Hand-edits log (pre-generator regime)
 
@@ -61,15 +61,14 @@ update-regime: pre-generator hand-edit
 | 2026-10-12 (v2) | COS | INTENTs bijgewerkt na Instinct-respons; Structurele route-sectie toegevoegd | Eerste terugkoppeling van Instinct verwerkt |
 | 2026-10-12 (v3) | COS | INTENT-003 → live; eerste sync-mirror commit `b8fcc0d` naar `0xtsotsi/Djinlabs-Mothership` (public) | Founder bevestigde repo is public; structurele route COS → Instinct geactiveerd |
 | 2026-10-12 (v4) | COS | Notion sync-pagina naam geverifieerd via Notion-search: **"Instinct sync — Hermes - Instinct"** (parent: Webrnds). GitHub-rij bijgewerkt met live-repo. | Commander vroeg "hoe heet de notion-sync pagina"; Notion-search via COS-integratie gaf directe titel |
+| 2026-10-12 (v5) | COS | INTENT-004 → ✅ live (Notion-share bevestigd via verbindingstest gelezen door COS). Structurele route-sectie geschreven naar "beide staan"-toestand. | Instinct-respons 2026-10-12 meldde verbindingstest + bevestigde page-id als stabiele sleutel; COS leest de testregel succesvol via `notion-fetch` |
 
 ## Structurele route (vervangt file-pad relay)
 
-Zodra INTENT-003 + INTENT-004 beide staan, vervalt de file-pad-relay via founder in beide richtingen:
+Beide structurele routes staan sinds 2026-10-12; file-pad relay via founder is in beide richtingen vervallen.
 
-- **COS → Instinct:** mirror commit naar GitHub-repo `0xtsotsi/Djinlabs-Mothership` (public, aangemaakt 2026-10-12, **commit `b8fcc0d`** = deze mirror op `cos/_internal/staging/instinct-sync-mirror.md`, 5390 bytes, 77 regels). Instinct leest gecommitte files via bestaande GitHub-koppeling. Geen aparte Notion-mirror-pagina nodig aan COS-kant. **Founder-relay in deze richting vervalt zodra Instinct commit `b8fcc0d` heeft verwerkt.**
-- **Instinct → COS:** COS leest de Instinct-status-sectie direct via Notion-API zodra de pagina is gedeeld met de COS-integratie. Founder-relay in die richting vervalt.
-
-Tot beide structurele routes staan: file-pad relay via founder in beide richtingen. Huidig pad staat in §CONTACT.
+- **COS → Instinct:** mirror commit naar GitHub-repo `0xtsotsi/Djinlabs-Mothership` (public, branch `main`). Commit-volgorde: `b8fcc0d` (v1) → `72db838` (v4, Notion-page-name geverifieerd) → v5 (INTENT-004 live, deze versie). Instinct leest gecommitte files via bestaande GitHub-koppeling en heeft de mirror op 2026-10-12 verwerkt in 30-min digest-cyclus (per Instinct-respons). Geen aparte Notion-mirror-pagina nodig aan COS-kant.
+- **Instinct → COS:** COS leest de Instinct-status-sectie direct via `mcp__notion__notion-fetch` op page-id `3e44c5f9-f8e5-81d0-ad77-db30272dc92c` (parent: Webrnds; canonical URL: `https://app.notion.com/p/3e44c5f9f8e581d0ad77db30272dc92c`). COS-side read is geverifieerd via de verbindingstest-regel van 2026-10-12 11:33.
 
 ## Notities
 
