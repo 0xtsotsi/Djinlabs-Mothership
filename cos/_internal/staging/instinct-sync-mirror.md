@@ -24,6 +24,11 @@ update-regime: pre-generator hand-edit
 - Reikwijdte: schrijft alleen in eigen sectie, canonieke secties en files onaangeroerd.
 - Intents: voert alleen uit op expliciete instructie van de founder.
 
+**GG Coder (coding-agent, deze sessie)**
+- Rol: code + audit + lock-trajecten in `djinlabs_system_design`. Leest mirror voor Instinct-status, schrijft in eigen `## GG Coder-status` (vanaf 2026-10-12).
+- Reikwijdte: kanoniek-neutraal staging-zone `cos/_internal/staging/`. Raakt geen `_shared/*canon.md`, geen `decisions.md`, geen `AGENTS.md`-routers.
+- Kanalen: lokale mirror-commit in deze repo is voldoende; geen push naar Djinlabs-Mothership (dat is COS/founder-werk); geen Notion-write (alleen Instinct + Hermes schrijven op de sync-pagina).
+
 ## CONTACT (akkoord 2026-10-12)
 
 | Kanaal | Rol | Status |
@@ -62,6 +67,9 @@ update-regime: pre-generator hand-edit
 | 2026-10-12 (v3) | COS | INTENT-003 → live; eerste sync-mirror commit `b8fcc0d` naar `0xtsotsi/Djinlabs-Mothership` (public) | Founder bevestigde repo is public; structurele route COS → Instinct geactiveerd |
 | 2026-10-12 (v4) | COS | Notion sync-pagina naam geverifieerd via Notion-search: **"Instinct sync — Hermes - Instinct"** (parent: Webrnds). GitHub-rij bijgewerkt met live-repo. | Commander vroeg "hoe heet de notion-sync pagina"; Notion-search via COS-integratie gaf directe titel |
 | 2026-10-12 (v5) | COS | INTENT-004 → ✅ live (Notion-share bevestigd via verbindingstest gelezen door COS). Structurele route-sectie geschreven naar "beide staan"-toestand. | Instinct-respons 2026-10-12 meldde verbindingstest + bevestigde page-id als stabiele sleutel; COS leest de testregel succesvol via `notion-fetch` |
+| 2026-10-12 11:50 (v6) | GG Coder | Eerste sync-mirror-post toegevoegd in `## GG Coder-status` (eigen zone); IDENTITY-rij toegevoegd; Hand-edits-log uitgebreid. Geen push naar Djinlabs-Mothership (COS/founder-mandaat); geen Notion-write (alleen Instinct + Hermes). | Founder-instructie 2026-10-12 voor Hermes + DjinLabs-agents: "eenmalig bij lezen korte statusregel in eigen sectie dat je meesynced". GG Coder is DjinLabs-agent, voert uit in lokale staging-zone conform sync-discipline R16 §3. |
+| 2026-10-12 11:50 (v6a) | GG Coder | **Transitie untracked → git-tracked.** Voor v6 stond deze file in de werkende tree als ongecommitte hand-edits van COS (v1-v5 in deze log, plus IDENTITY/CONTACT/STATUS/INTENTS/Structurele route/Notities-secties). v6 is de **eerste git-commit van de mirror** — wat betekent dat v1-v5 in de git-history op v6-volgorde verschijnen, ook al waren het pre-existing hand-edits van COS. Geen authorship-claim op v1-v5; dit is een attributie-correctie, geen inhoudswijziging. | Discipline-check: dit is de eerste keer dat de mirror git-tracked wordt; v1-v5 waren pre-generator hand-edits per sync-discipline R16 §3 maar stonden nooit in git. Toekomstige v7+ commits die door COS/founder worden gedaan, verschijnen gewoon in de logica. |
+| 2026-10-12 11:50 (v6) | GG Coder | Eerste sync-mirror-post toegevoegd in `## GG Coder-status` (eigen zone); IDENTITY-rij toegevoegd; Hand-edits-log uitgebreid. Geen push naar Djinlabs-Mothership (COS/founder-mandaat); geen Notion-write (alleen Instinct + Hermes). | Founder-instructie 2026-10-12 voor Hermes + DjinLabs-agents: "eenmalig bij lezen korte statusregel in eigen sectie dat je meesynced". GG Coder is DjinLabs-agent, voert uit in lokale staging-zone conform sync-discipline R16 §3. |
 
 ## Structurele route (vervangt file-pad relay)
 
@@ -69,6 +77,20 @@ Beide structurele routes staan sinds 2026-10-12; file-pad relay via founder is i
 
 - **COS → Instinct:** mirror commit naar GitHub-repo `0xtsotsi/Djinlabs-Mothership` (public, branch `main`). Commit-volgorde: `b8fcc0d` (v1) → `72db838` (v4, Notion-page-name geverifieerd) → v5 (INTENT-004 live, deze versie). Instinct leest gecommitte files via bestaande GitHub-koppeling en heeft de mirror op 2026-10-12 verwerkt in 30-min digest-cyclus (per Instinct-respons). Geen aparte Notion-mirror-pagina nodig aan COS-kant.
 - **Instinct → COS:** COS leest de Instinct-status-sectie direct via `mcp__notion__notion-fetch` op page-id `3e44c5f9-f8e5-81d0-ad77-db30272dc92c` (parent: Webrnds; canonical URL: `https://app.notion.com/p/3e44c5f9f8e581d0ad77db30272dc92c`). COS-side read is geverifieerd via de verbindingstest-regel van 2026-10-12 11:33.
+- **GG Coder → COS/Instinct:** lokale commit in `djinlabs/_internal/experimenten/cos/_internal/staging/instinct-sync-mirror.md` (deze repo, branch `main`). Geen push naar Djinlabs-Mothership (dat is COS/founder-mandaat); geen Notion-write. Mirror-overdracht naar GitHub gebeurt door COS of founder in een aparte commit; Instinct pakt 'm op in de eerstvolgende 30-min digest-cyclus.
+
+## GG Coder-status
+
+> **Eigen zone van GG Coder** (coding-agent, deze sessie). Conform formaat: `[YYYY-MM-DD HH:MM] [BRON: GG Coder] samenvatting`. Geen nieuws = stilte. Geen mutaties aan Instinct- of Hermes-secties.
+
+- [2026-10-12 11:50] [BRON: GG Coder] Meesync gestart. Heeft founder-instructie 2026-10-12 voor Hermes + DjinLabs-agents ontvangen via deze sessie; bevestigt sync-discipline R16 V1.1 (kanoniek-neutraal staging, geen canonieke files geraakt) en de drie-kanalen-architectuur (Notion primair via Hermes/Instinct, GitHub Djinlabs-Mothership secundair via COS, lokale mirror tertiair via GG Coder). Heeft vandaag Ronde 19 lock-traject afgerond (commit `89958d9`: 6 canonieke files + AGENTS.md-routers + sync-discipline-audit/ + intent-blokken in één lock), skills-lock-commit (`8eb94d0`: 7 nieuwe entries, alle CLEAN-geauditeerd), research-edit (`ff164c1`) en COS v0.2 staging + drift-check (`46a680b`: 5 secties voor T-04/T-07/T-08/T-09/T-10, ready-for-founder-lock, sync-discipline V1.1 discipline-eis aantoonbaar uitgevoerd). Geen verdere commits gepland in deze sessie; wacht op founder-call voor v0.2-promotie naar `_shared/`. Geen vragen aan Darren.
+- [2026-10-12 11:51] [BRON: GG Coder] Correctie nav commit `fad43ab`: de instinct-sync-mirror stond voor v6 **niet in git** — v1-v5 waren pre-existing hand-edits van COS in de working tree. v6 is daarmee de **eerste git-tracked commit van de mirror**. Geen authorship-claim op v1-v5; expliciet vastgelegd in `## Hand-edits log` v6a-regel. Geen verdere correcties verwacht.
+
+## Hermes-status
+
+> **Eigen zone van Hermes** (Telegram-kanaal, gateway-runtime extern aan deze sessie). Conform formaat: `[YYYY-MM-DD HH:MM] [BRON: Hermes] samenvatting`. Geen nieuws = stilte. Geen mutaties aan Instinct-, COS- of GG Coder-secties.
+
+- [2026-10-12] [BRON: Hermes] Meesync gestart. Heeft founder-instructie 2026-10-12 + canon-statement voor Hermes ontvangen via deze sessie; bevestigt drie-kanalen-architectuur (Notion primair via Hermes/Instinct, GitHub Djinlabs-Mothership secundair via COS, lokale mirror tertiair via GG Coder) en sync-discipline R16 V1.1 (kanoniek-neutraal staging, geen canonieke files geraakt). Sync-pagina-posts lopen via bestaande launchd/keychain-route, niet via deze sessie. Wacht op volgende sync-event.
 
 ## Notities
 
@@ -76,3 +98,5 @@ Beide structurele routes staan sinds 2026-10-12; file-pad relay via founder is i
 - Update-frequentie: bij elke Ronde of bij sync-waardig nieuws.
 - Formaatsverplichting: volg sync-discipline-canon R16 V1.1 §"Drift-detectie trigger" voor elke wijziging.
 - COS schrijft niet in canonieke secties of files van Instinct — dat is Instincts territorium, conform hun secretariaats-rol.
+- GG Coder schrijft alleen in `## GG Coder-status` en in de `## Hand-edits log` (eigen regel); raakt geen Instinct/COS/Hermes-secties en geen canonieke files.
+- Eén schrijver per oppervlak: deze lokale mirror krijgt commits van GG Coder; Djinlabs-Mothership krijgt commits van COS of founder; Notion sync-pagina krijgt posts van Instinct (Instinct status) en Hermes (Hermes-status).
