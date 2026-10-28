@@ -146,7 +146,7 @@ Beide structurele routes staan sinds 2026-10-12; file-pad relay via founder is v
 - COS schrijft niet in canonieke secties of files van Instinct — dat is Instincts territorium, conform hun secretariaats-rol.
 - GG Coder schrijft alleen in `## GG Coder-status` en in de `## Hand-edits log` (eigen regel); raakt geen Instinct/COS/Hermes-secties en geen canonieke files.
 - Eén schrijver per oppervlak: deze Mothership-mirror krijgt commits van COS of founder (via GitHub API of push); lokale workshop-mirror krijgt commits van GG Coder of COS; Notion sync-pagina krijgt posts van Instinct (Instinct status) en Hermes (Hermes-status).
-- Aparte histories: lokale workshop `djinlabs_system_design` heeft een onafhankelijke history; Djinlabs-Mothership `0xtsotsi/Djinlabs-Mothership` heeft een eigen history (HEAD op Mothership: v9, 28-10-2026 — de v9-commit bevat de `## COS status`-zone met het WEB-6-register en het DJIN-25 runtimebewijs; v8b was `f4a37d9`). Spiegeling tussen beiden gebeurt via COS of founder, niet via force-push.
+- Aparte histories: lokale workshop `djinlabs_system_design` heeft een onafhankelijke history; Djinlabs-Mothership `0xtsotsi/Djinlabs-Mothership` heeft een eigen history (HEAD op Mothership: v9b, 28-10-2026 — v9 is `f7081e03ce6bb03f55e05ca5a23b855b172494d3` en bevat de `## COS status`-zone met het WEB-6-register en het DJIN-25 runtimebewijs; v8b was `f4a37d9`). Spiegeling tussen beiden gebeurt via COS of founder, niet via force-push.
 
 ## COS status
 
